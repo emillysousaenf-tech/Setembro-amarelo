@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Setembro Amarelo 🌻</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url('https://i.pinimg.com/originals/3b/50/9d/3b509d38cb74197bd7a0229fb4785fbe.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 700px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+  }
+  h1 {
+    font-family: 'Pacifico', cursive;
+    color: #FFA500;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.4;
+  }
+  img.girassol {
+    width: 100px;
+    position: absolute;
+  }
+  .girassol1 { top: 20px; left: 20px; }
+  .girassol2 { bottom: 20px; right: 20px; }
+</style>
+</head>
+<body>
+  <!-- Girassóis nos cantos -->
+  <img class="girassol girassol1" src="https://i.imgur.com/2RjL0yT.png" alt="Girassol">
+  <img class="girassol girassol2" src="https://i.imgur.com/2RjL0yT.png" alt="Girassol">
+
+  <div class="container">
+    <h1>💛 Setembro Amarelo 💛</h1>
+    <p id="frase"></p>
+  </div>
+
+  <script>
+    const frases = [
+      'Você é mais forte do que imagina.',
+      'Seu sorriso é necessário no mundo.',
+      'Não desista, o amanhã precisa de você.',
+      'Você importa. Sempre.',
+      'A vida é única, e você é insubstituível.',
+      'Permita-se viver dias bons e ruins, ambos fazem parte.',
+      'Procure ajuda, pedir apoio é um ato de coragem.',
+      'Seu valor não diminui por causa dos momentos difíceis.',
+      'Você é amado, mesmo quando não percebe.',
+      'Cada dia é uma nova oportunidade de recomeçar.',
+      'Respire fundo. Vai passar.',
+      'A sua vida tem um propósito único.',
+      'Alguém se inspira em você sem que você saiba.',
+      'Você não está sozinho nessa caminhada.',
+      'Tudo pode mudar, inclusive para melhor.'
+    ];
+
+    function sortearFrase() {
+      const indice = Math.floor(Math.random() * frases.length);
+      document.getElementById('frase').textContent = frases[indice];
+    }
+
+    sortearFrase();
+  </script>
+</body>
+</html>
